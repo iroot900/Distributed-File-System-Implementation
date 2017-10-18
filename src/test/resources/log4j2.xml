@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" name="MyApp" packages="">
+  <Appenders>
+
+   <RollingFile name="RollingFile" fileName="logs/dfs_app.log"
+                 filePattern="logs/$${date:yyyy-MM-dd-mm}/app-%d{MM-dd-yyyy-mm--ss}-%i.log.gz">
+	    <PatternLayout>
+		 <Pattern>%d [%p] %C %M (%F[%L]) - %m%n</Pattern>
+    	</PatternLayout>
+ 		<Policies>
+		  <SizeBasedTriggeringPolicy size="2 KB"/>
+    	</Policies>
+   </RollingFile>
+
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout>
+		 <Pattern>%d [%p] %C %M (%F[%L]) - %m%n</Pattern>
+      </PatternLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <!--AppenderRef ref="RollingFile"/-->
+      <AppenderRef ref="Console"/>
+    </Root>
+
+    <Logger name="java.com.darren.parctice.rpc.Server" level="warn" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+
+  </Loggers>
+</Configuration>

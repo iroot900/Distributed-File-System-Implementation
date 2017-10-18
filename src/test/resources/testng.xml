@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1">
+
+  <!--test name="test1">
+    <groups>
+      <run>
+          <include name = "func"/>
+      </run>
+    </groups>
+    <classes>
+       <class name=""/>
+       <class name="
+    </classes>
+  </test-->
+
+  <test name="unifiedTest">
+    <classes>
+      <class name="com.darren.parctice.hdfs.DataNodeTest"/>
+      <class name="com.darren.parctice.hdfs.DFSClientTest"/>
+      <class name="com.darren.parctice.hdfs.FSDataSetTest"/>
+      <class name="com.darren.parctice.hdfs.FSDirectoryTest"/>
+      <class name="com.darren.parctice.hdfs.FSEditLogTest"/>
+      <class name="com.darren.parctice.hdfs.FSNamesystemTest"/>
+      <class name="com.darren.parctice.hdfs.INodeTreeTest"/>
+      <class name="com.darren.parctice.hdfs.LRMTest"/>
+      <class name="com.darren.parctice.hdfs.NameNodeTest"/>
+      <class name="com.darren.parctice.rpc.App2Test"/>
+      <class name="com.darren.parctice.rpc.AppTest"/>
+      <class name="com.darren.parctice.util.UtilTest"/>
+    </classes>
+  </test>
+</suite>
